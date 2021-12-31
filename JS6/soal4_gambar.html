@@ -1,0 +1,78 @@
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas JSes6 | Kamiliya-TI13 | Pilih Gambar</title>
+</head>
+<body>
+    <style>
+        *{
+            background-color: greenyellow;
+            margin-top: auto;
+            align-items: center;
+            text-align: center;
+            border-style: solid;
+        }
+    </style>
+    <select name="" id="daftar" onchange="tampil()">
+        <option value="">-Pilih Hewan-</option>
+        <option value="kucing">Kucing</option>
+        <option value="panda">Panda</option>
+        <option value="orangutan">Orang Utan</option>
+        <option value="harimau">Harimau</option>
+        <option value="singa">Singa</option>
+        <option value="elang">Elang</option>
+        <option value="burunghantu">Burung Hantu</option>
+    </select>
+    <div id="hasil"></div>
+
+    <script>
+        let daftar = document.getElementById("daftar")
+        let hasil = document.getElementById("hasil")
+
+        function tampil(){
+            switch (daftar.value) {
+                case "kucing":
+                hasil.innerHTML = '<img src="https://i.pinimg.com/originals/e3/4f/e6/e34fe6171184240ccaa052756a6193fd.jpg" alt="">'
+                alert("ini adalah gambar Kucing")
+                break;
+
+                case "panda":
+                hasil.innerHTML = '<img src="http://www.dreamers.id/img_artikel/83fubao-everland-korea.jpg" alt="">'
+                alert("ini adalah gambar Panda")
+                break;
+
+                case "orangutan":
+                hasil.innerHTML = '<img src="http://c.files.bbci.co.uk/5F3D/production/_111418342_orangutan_indonesia_getty.jpg" alt="">'
+                alert("ini adalah gambar Orang Utan")
+                break;
+
+                case "harimau":
+                hasil.innerHTML = '<img src="https://cdn.idntimes.com/content-images/community/2019/10/bayi-harimau-4aad6973649dbef911aea51c9af41133.jpg" alt="">'
+                alert("ini adalah gambar Harimau")
+                break;
+
+                case "singa":
+                hasil.innerHTML = '<img src="https://cdn0-production-images-kly.akamaized.net/fGtbxUYAaTSYUmTCRbeNVZndcME=/1231x710/smart/filters:quality(75):strip_icc():format(jpeg)/kly-media-production/medias/3023194/original/033495300_1579108053-20200116-Singa-Putih-Langka-1.jpg" alt="">'
+                alert("ini adalah gambar Singa")
+                break;
+
+                case "elang":
+                hasil.innerHTML = '<img src="https://www.kibrispdr.org/dwn/3/gambar-burung-elang-sudah-tua.jpg" alt="">'
+                alert("ini adalah gambar Elang")
+                break;
+
+                case "burunghantu":
+                hasil.innerHTML = '<img src="https://cdn.popbela.com/content-images/post/20210303/500pxcom-barn-owl-by-milan-zygmunt-01739d1ba8d3b9800797b4f60810d6c6.jpg" alt="">'
+                alert("ini adalah gambar Burung Hantu")
+                break;
+
+                default:
+                    hasil.innerHTML =""
+            }
+        }
+    </script>
+</body>
+</html>
